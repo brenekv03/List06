@@ -54,5 +54,18 @@ namespace List06
             }
             MessageBox.Show("Max: " + max + " Poradi max: " + poradiMax + "\nDruhe max: " + druheMax + " Poradi druheho max: " + poradiDruhehoMax);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Clear();
+            int max = list.Max();
+            int min = list.Min();
+            list[list.IndexOf(max)] = min;
+            list[list.IndexOf(min)] = max;
+            foreach(int x in list)
+            {
+                listBox2.Items.Add(x);
+            }
+        }
     }
 }
